@@ -90,9 +90,9 @@
               <p>
                Added 3 New Pictures to album <span class="album-name">Landscapes</span>
               </p>
-              <a href="images/feedimg.jpg"> <img src="images/feedimg.jpg" alt=""></a>
-            <a href="images/feedimg2.jpg">   <img src="images/feedimg2.jpg" alt=""></a>
-             <a href="images/feedimg3.jpg">  <img src="images/feedimg3.jpg" alt=""></a>
+              <img src="images/feedimg.jpg" onclick="imageOne()" alt="">
+               <img src="images/feedimg2.jpg" onclick="imageTwo()" alt="">
+              <img src="images/feedimg3.jpg" onclick="imageThree()" alt="">
             </div>
           </div>
         </div>
@@ -113,6 +113,16 @@
        
        modal.style.display = "none"
        
+     }
+
+     function imageOne(){
+      window.location.href= "images/feedimg.jpg";
+     }
+      function imageTwo(){
+      window.location.href= "images/feedimg2.jpg";
+     }
+      function imageThree(){
+      window.location.href= "images/feedimg3.jpg";
      }
     </script>
   </body>
