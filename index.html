@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity Feed</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="modal">
+        <div class="form">
+         <p style="margin-bottom: 10px; font-size: 20px;" onclick="hide()"><i class="fas fa-angle-left"></i></p>
+          <p style="font-size: 15px; margin-bottom: 5px;">Reply to <span style="font-weight: 600; ">Horace Clark</span>'s comment</p>
+          <p>"My the father of understanding guide us"</p>
+     <div class="form-input">
+     
+          <input type="text" placeholder="Reply">
+          <button onclick='sent()'><i class="fas fa-share"></i></button>
+        </div>
+        </div>
+      </div>
+
+      <div class="body-area">
+        <p class="today">Today</p>
+
+        <div class="card">
+          <div class="time">16:25</div>
+          <div class="card-body">
+            <div class="card-img">
+              <img src="images/profiles/32.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <div class="name">Bonnie D. Dejesus</div>
+              <p>
+                Edit task proin aliquam auctor consectetuer elit and assigned it
+                to Michael D. Cullens
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="time">16:25</div>
+            <div class="card-img">
+              <img src="images/profiles/54.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <div class="name">Bonnie D. Dejesus</div>
+              <p>
+                Edit task proin aliquam auctor consectetuer elit and assigned it
+                to Michael D. Cullens
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="time">16:25</div>
+          <div class="card-body">
+            <div class="card-img">
+              <img src="images/profiles/10.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <div class="name">Horace Clark</div>
+              <p>
+               Commented to project Quantum Break 
+               <p class="comment">May the father of understanding guide us</p><a onclick="showModal()" href="#">Reply</a>
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="time">16:25</div>
+            <div class="card-img">
+              <img src="images/profiles/9.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <div class="name">Madelyn Speciale</div>
+              <p>
+               Added 3 New Pictures to album <span class="album-name">Landscapes</span>
+              </p>
+              <img src="images/feedimg.jpg" alt="">
+              <img src="images/feedimg2.jpg" alt="">
+              <img src="images/feedimg3.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+       var modal = document.querySelector('.modal');
+      function showModal(){
+        modal.style.display = "flex"
+      }
+     function sent(){
+       
+        modal.style.display = "none"
+        alert("Message Sent")
+      }
+      function hide(){
+       
+       modal.style.display = "none"
+       
+     }
+    </script>
+  </body>
+</html>

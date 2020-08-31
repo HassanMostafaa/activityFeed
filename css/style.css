@@ -1,0 +1,248 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.378),
+      rgba(255, 255, 255, 0.76)
+    ),
+    url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.829);
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fade 1s forwards;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.modal .form {
+  background: linear-gradient(
+    45deg,
+    #00d3f1 0%,
+    rgba(255, 255, 255, 0.944) 50%
+  );
+
+  padding: 30px 50px;
+  width: 550px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.521);
+}
+.modal .form button {
+  outline: none;
+  border: 0px;
+  font-size: 20px;
+  background: transparent;
+  border-radius: 50%;
+  font-weight: 200;
+  animation: slide 1s forwards;
+  animation-delay: 1s;
+  transform: translateX(-150px);
+  opacity: 0;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50px);
+  }
+}
+.modal .form input {
+  padding: 15px 10px;
+
+  width: 20%;
+  border: none;
+  border-bottom: 1px solid #3f3f3f;
+  background: transparent;
+  outline: none;
+  animation: inputFade 2s forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+@keyframes inputFade {
+  0% {
+    width: 20%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+.modal .form .form-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body-area {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.today {
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: #00d3f1;
+  box-shadow: 0 0 10px #00d3f1;
+  margin-bottom: 10px;
+}
+
+.card {
+  width: 400px;
+  padding: 20px;
+  color: #333;
+  position: relative;
+}
+
+.card:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #00d3f1;
+  border-radius: 50%;
+  right: -1.5%;
+}
+
+.card:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #00d3f1;
+  border-radius: 50%;
+  left: -1.5%;
+}
+
+.card .card-body .name {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card:nth-child(odd) {
+  transform: translateX(-200px);
+  border-right: 1px solid #9a9fa8;
+  text-align: right;
+}
+
+.card:nth-child(even) {
+  transform: translateX(199px);
+  border-left: 1px solid #9a9fa8;
+}
+
+.card .card-body .card-img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.544);
+}
+
+.time {
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.308);
+}
+
+.comment {
+  padding: 10px 10px;
+  background-color: #989b9e;
+  color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.card-text {
+  position: relative;
+}
+
+.card-text a {
+  position: absolute;
+  right: -50px;
+  bottom: 7px;
+  color: #333;
+  font-size: 15px;
+}
+
+.card-text img {
+  width: 70px;
+  margin: 10px 0px 0 10px;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px #00000046;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 90%;
+  }
+
+  .card:nth-child(odd) {
+    transform: translateX(0px);
+    border-top: 1px solid #9a9fa8;
+    border-right: 0;
+    text-align: right;
+  }
+
+  .card:nth-child(even) {
+    transform: translateX(0px);
+    border-left: 0px solid #9a9fa8;
+  }
+
+  .card-text a {
+    position: relative;
+    right: -10px;
+    bottom: 0px;
+    color: #333;
+    font-size: 15px;
+  }
+  .modal .form {
+    background: linear-gradient(
+      45deg,
+      #00d3f1 0%,
+      rgba(255, 255, 255, 0.944) 50%
+    );
+
+    padding: 30px 50px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.521);
+  }
+}
